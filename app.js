@@ -4,7 +4,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
-mongoose.connect('mongodb+srv://<admin>:<password>@cluster0.rgrzw.mongodb.net/postsDB', {useNewUrlParser: true, useUnifiedtopology: true});
+mongoose.connect('mongodb+srv://admin-soham:soham@cluster0.rgrzw.mongodb.net/postsDB', {useNewUrlParser: true, useUnifiedtopology: true});
 
 const postSchema = mongoose.Schema({
   title: String,
