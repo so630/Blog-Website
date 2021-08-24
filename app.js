@@ -55,16 +55,6 @@ app.get('/compose', (req, res) => {
   res.render('compose')
 })
 
-
-
-app.post('/signin', (req, res) => {
-  if (req.body.email == 'oniichan2510@gmail.com' && req.body.password == 'Jam') {
-    res.redirect('/compose/630cf10ea4eee20189aa4c93f020e1aeff840c1e')
-  } else {
-    res.render('signup-fail')
-  }
-})
-
 app.post('/compose', (req, res) => {
   const post = new Post({
     title: req.body.title,
