@@ -3,6 +3,10 @@
 <p><%= message %></p>
 <% for (let i = 0; i < posts.length; i++) { %>
     <h1><%= posts[i].title %></h1>
-    <p style="word-wrap: break-word;"><%= posts[i].post.substring(0, 100)%>... <a href="/posts/<%= posts[i]._id %>">Read More</a></p>
+    <% if (posts[i].post.length <= 100) { %>
+        <p style="word-wrap: break-word;"><%= posts[i].post%></p>
+    <% } else { %>
+        <p style="word-wrap: break-word;"><%= posts[i].post.substring(0, 100)%>... <a href="/posts/<%= posts[i]._id %>">Read More</a></p>
+    <% } %>
 <% } %>
 <%- include('partials/footer') %>
